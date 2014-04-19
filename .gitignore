@@ -1,0 +1,7 @@
+# for Eclipse, Android, jetty-distribution
+*/.settings
+jetty-distribution-*
+*/bin
+*/obj
+*/gen
+
