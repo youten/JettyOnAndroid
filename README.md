@@ -4,7 +4,7 @@ Jetty on Android.
 
 ## Projects
 
-HelloJetty - Servlet by Jetty on Android Simple Sample.
+HelloJetty - Jetty on Android Sample, using WebSocket.
 
 ## How re-archive jetty-x.x.x.jar
 - download binary tarball from http://download.eclipse.org/jetty/

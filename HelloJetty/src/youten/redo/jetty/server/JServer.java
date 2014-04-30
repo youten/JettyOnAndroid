@@ -46,8 +46,10 @@ public class JServer {
         if (mServer == null) {
             // setup Servlet Handler
             ServletContextHandler servletHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
-            // HelloServletクラスを "/hello"に割り当て
+            // Hello Servletを "/hello"に割り当て
             servletHandler.addServlet(new ServletHolder(new HelloServlet()), "/hello");
+            // WebSocketなChat Servletを"/wschat"に割り当て
+            servletHandler.addServlet(new ServletHolder(new WSChatServlet()), "/wschat");
 
             // setup Resource Handler
             // assets配下を展開
