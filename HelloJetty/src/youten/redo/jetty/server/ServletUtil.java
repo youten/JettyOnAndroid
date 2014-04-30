@@ -11,7 +11,7 @@ import youten.redo.jetty.http.ContentType;
 
 public class ServletUtil {
     public static final String LS = System.getProperty("line.separator");
-
+    
     /**
      * 単純なHtmlを返す。
      * @param resp

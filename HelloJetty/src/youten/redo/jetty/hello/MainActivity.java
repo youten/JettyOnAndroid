@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_start) {
-            mServer.start();
+            mServer.start(getApplicationContext());
             setStartMenuEnabled(false);
             return true;
         } else if (item.getItemId() == R.id.action_stop) {
@@ -44,6 +44,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mServer.stop();
     }
 
     private void setStartMenuEnabled(boolean startMenuEnabled) {
