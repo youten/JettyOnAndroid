@@ -12,6 +12,13 @@ import youten.redo.jetty.http.ContentType;
 public class ServletUtil {
     public static final String LS = System.getProperty("line.separator");
 
+    /**
+     * 単純なHtmlを返す。
+     * @param resp
+     * @param title
+     * @param message
+     * @throws IOException
+     */
     public static void responseHtml(HttpServletResponse resp, String title, String message) throws IOException {
         resp.setCharacterEncoding(HTTP.UTF_8);
         resp.setContentType(ContentType.HTML);

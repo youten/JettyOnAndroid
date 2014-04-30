@@ -12,17 +12,26 @@ public class JServer {
     private int mPort;
     private Server mServer;
 
+    /**
+     * コンストラクタ
+     * @param port Jettyを起動するport
+     */
     public JServer(int port) {
         mPort = port;
     }
 
+    /**
+     * Serverを開始する。
+     */
     public synchronized void start() {
         if ((mServer != null) && (mServer.isStarted())) {
             return;
         }
         if (mServer == null) {
             mServer = new Server(mPort);
+            // Servletコンテキスト・ルートは"/"に設定
             ServletContextHandler handler = new ServletContextHandler(mServer, "/", ServletContextHandler.SESSIONS);
+            // HelloServletクラスを "/hello"に割り当て
             handler.addServlet(new ServletHolder(new HelloServlet()), "/hello");
         }
 

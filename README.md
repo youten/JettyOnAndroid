@@ -1,4 +1,4 @@
-Jetty Try
+JettyOnAndroid
 ====
 Jetty on Android.
 
