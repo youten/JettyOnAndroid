@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HelloJetty</string>
+    <string name="action_start">Start</string>
+    <string name="action_stop">Stop</string>
     <string name="action_settings">Settings</string>
+    
     <string name="hello_world">Hello world!</string>
 </resources>
